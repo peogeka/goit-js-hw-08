@@ -23,29 +23,13 @@ const imgList = galleryItems
     .join('');
 
 galleryList.insertAdjacentHTML('beforeend', imgList);
-galleryList.onclick = (event) => {
-    event.preventDefault();
-    if (!event.target.classList.contains('gallery_image')) {
-        return;
-    }
 
-    const imageSource = event.target.dataset.source;
-    const instance = new SimpleLightbox(`<img src="${imageSource}" width="1400" height="900">`, {
-        onShow: () => {
-            window.addEventListener('keydown', onEsc);
-        },
-        onClose: () => {
-            window.removeEventListener('keydown', onEsc);
-        }
-    });
 
-    instance.show();
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: function(element) {
+    return `<img src="${element.href}" width="1400" height="900">`;
+  },
 
-    function onEsc(event) {
-        if (event.key === 'Escape') {
-            instance.close();
-        }
-    }
-};
+});
 
-console.log(galleryItems);
+ 
