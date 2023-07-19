@@ -24,12 +24,6 @@ const imgList = galleryItems
 
 galleryList.insertAdjacentHTML('beforeend', imgList);
 
-
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: function(element) {
-    return `<img src="${element.href}" width="1400" height="900">`;
-  },
-
+  content: `<img src="${preview}" width="1400" height="900">`
 });
-
- 
