@@ -7,5 +7,5 @@
                     alt="${o}"
                 />
             </a>
-        </li>`).join("");d.insertAdjacentHTML("beforeend",c),new(function(t){return t&&t.__esModule?t.default:t}(e))(".gallery a",{content:`<img src="${preview}" width="1400" height="900">`});
-//# sourceMappingURL=01-gallery.69c1f864.js.map
+        </li>`).join("");d.insertAdjacentHTML("beforeend",c),new(function(t){return t&&t.__esModule?t.default:t}(e))(".gallery a");
+//# sourceMappingURL=01-gallery.da5ee55a.js.map
