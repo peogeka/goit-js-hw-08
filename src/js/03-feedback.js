@@ -31,7 +31,7 @@ const onLoad = () => {
     const data = localStorage.getItem(feedbackStateKey);
     if (!data) return;
     savedState = JSON.parse(data);
-    Object.entries(feedbackFormState).forEach(([key, val]) => {
+    Object.entries(savedState).forEach(([key, val]) => {
       feedbackForm.elements[key].value = val;
     })
   } catch (error) {
