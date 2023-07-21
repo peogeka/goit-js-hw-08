@@ -16,6 +16,7 @@ const saveStateToLocalStorage = (e) => {
 
 const throttledSaveStateToLocalStorage = throttle(saveStateToLocalStorage, 500);
 
+feedbackForm.addEventListener("input", throttledSaveStateToLocalStorage);
 
 feedbackForm.addEventListener('submit', (e) => {
   e.preventDefault();

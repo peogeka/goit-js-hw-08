@@ -24,6 +24,4 @@ const imgList = galleryItems
 
 galleryList.insertAdjacentHTML('beforeend', imgList);
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  content: `<img src="${preview}" width="1400" height="900">`
-});
+const lightbox = new SimpleLightbox(".gallery a");
